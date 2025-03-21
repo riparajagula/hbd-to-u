@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Sayang (ㅅ˙³˙)♡</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            text-align: center;
+            background: linear-gradient(to right, #ff9a9e, #fad0c4);
+            font-family: 'Timer New Roman', cursive, sans-serif;
+        }
+        .container {
+            padding: 20px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            display: inline-block;
+            margin-top: 50px;
+        }
+        h1 {
+            color: #ff6699;
+        }
+        .birthday-photo {
+            width: 300px;
+            border-radius: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        .balloons {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+        }
+        .balloon {
+            width: 50px;
+            height: 60px;
+            background: pink;
+            border-radius: 50%;
+            position: absolute;
+            bottom: -100px;
+            animation: floatBalloon 5s linear infinite;
+        }
+        @keyframes floatBalloon {
+            0% { transform: translateY(0); opacity: 1; }
+            100% { transform: translateY(-100vh); opacity: 0; }
+        }
+        .balloon:nth-child(1) { left: 10%; animation-duration: 6s; }
+        .balloon:nth-child(2) { left: 30%; animation-duration: 5s; }
+        .balloon:nth-child(3) { left: 50%; animation-duration: 7s; }
+        .balloon:nth-child(4) { left: 70%; animation-duration: 6.5s; }
+        .balloon:nth-child(5) { left: 90%; animation-duration: 5.5s; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎉 HBD anakk kecilkuuu (ㅅ˙³˙)♡ </h1>
+        <img src="WhatsApp Image 2025-03-21 at 04.29.51_6de12e2f.jpg" alt="Foto Ulang Tahun" class="birthday-photo">
+        <p>akuu cuma bisa buatt inii,semoga kamu senengg yaa sama bikinan akuu,walaupun gini doang tp semaleman jir bikinnyaa...BTW HAPPY BIRTHDAY YAA CANTIIKKKK,WISHH U ALL THE BESTT POKONYAAA,aku bakal selalu jadi pasangan kamu yg baikkk,semoga kamu bahagia sama akuu,di kehidupan juga bahagiaa yaa sayang,kamu gabole ngerasa sendiriann,kamu punya aku,pasangan kamu sayangg,jdi klo ada apa apaa cerita ke akuu yaa,aku bakal jdi pasangan terbaik kamuu,semoga ulang tahun kali ini jadi ulang tahun paling bahagia buat kamuu yaa cantiikkk,loveee uuu n happyyy birthdayy!!! 🎈🎁</p>
+        <audio id="birthdaySong" loop>
+            <source src="ssstik.io_1742529757959.mp3" type="audio/mp3">
+            Browser Anda tidak mendukung audio tag.
+        </audio>
+        <button onclick="toggleSong()">Putar / Berhenti Lagu 🎵</button>
+    </div>
+
+    <div class="balloons">
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+    </div>
+
+    <script>
+        let isPlaying = false;
+        const song = document.getElementById('birthdaySong');
+
+        function toggleSong() {
+            if (isPlaying) {
+                song.pause();
+            } else {
+                song.play();
+            }
+            isPlaying = !isPlaying;
+        }
+    </script>
+</body>
+</html>

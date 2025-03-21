@@ -1,0 +1,77 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, #ff6b6b, #ff9f9f);
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    color: #ff4757;
+    margin-bottom: 1.5rem;
+}
+
+.birthday-photo {
+    max-width: 300px;
+    border-radius: 10px;
+    margin: 1rem 0;
+}
+
+p {
+    font-size: 1.2rem;
+    color: #2f3542;
+    margin: 1rem 0;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    background-color: #ff4757;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+.balloons {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.balloon {
+    position: absolute;
+    width: 30px;
+    height: 40px;
+    background: #ff6b6b;
+    border-radius: 50%;
+    animation: float 4s ease-in-out infinite;
+}
+
+.balloon:nth-child(2) { left: 20%; background: #ff9f9f; animation-delay: 0.5s; }
+.balloon:nth-child(3) { left: 40%; background: #ffd32a; animation-delay: 1s; }
+.balloon:nth-child(4) { left: 60%; background: #ff4757; animation-delay: 1.5s; }
+.balloon:nth-child(5) { left: 80%; background: #ff6b6b; animation-delay: 2s; }
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
